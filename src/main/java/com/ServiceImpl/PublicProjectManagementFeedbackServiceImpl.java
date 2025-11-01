@@ -24,9 +24,18 @@ import java.util.stream.Collectors;
 public class PublicProjectManagementFeedbackServiceImpl implements PublicProjectManagementFeedbackService {
     private final UserRepositoryService userRepositoryService;
     private final ProjectRepositoryService projectRepositoryService;
+
     private final PublicProjectManagementFeedbackRepositoryService publicProjectManagementFeedbackRepositoryService;
     private final PublicProjectManagementFeedbackMapper mapper;
     private final Validator validator;
+
+    public PublicProjectManagementFeedbackServiceImpl(UserRepositoryService userRepositoryService, ProjectRepositoryService projectRepositoryService, PublicProjectManagementFeedbackRepositoryService publicProjectManagementFeedbackRepositoryService, PublicProjectManagementFeedbackMapper mapper, Validator validator) {
+        this.userRepositoryService = userRepositoryService;
+        this.projectRepositoryService = projectRepositoryService;
+        this.publicProjectManagementFeedbackRepositoryService = publicProjectManagementFeedbackRepositoryService;
+        this.mapper = mapper;
+        this.validator = validator;
+    }
 
     @Override
     public PublicProjectManagementFeedbackDTO createFeedback(PublicProjectManagementFeedbackDTO feedbackDTO) {

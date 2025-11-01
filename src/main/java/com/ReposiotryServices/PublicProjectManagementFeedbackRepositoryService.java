@@ -14,6 +14,10 @@ import java.util.List;
 public class PublicProjectManagementFeedbackRepositoryService {
     private final PublicProjectManagementFeedbackRepository feedbackRepository;
 
+    public PublicProjectManagementFeedbackRepositoryService(PublicProjectManagementFeedbackRepository feedbackRepository) {
+        this.feedbackRepository = feedbackRepository;
+    }
+
     public PublicProjectManagementFeedbackEntity createFeedback(PublicProjectManagementFeedbackEntity feedbackEntity) {
         return getFeedbackEntity(feedbackEntity);
     }

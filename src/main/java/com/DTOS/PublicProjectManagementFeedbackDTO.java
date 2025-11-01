@@ -1,16 +1,14 @@
 package com.DTOS;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.time.LocalDate;
 
-@Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
+@Getter
+@Setter
 public class PublicProjectManagementFeedbackDTO {
 
     private Long id;
@@ -19,4 +17,8 @@ public class PublicProjectManagementFeedbackDTO {
     private String comment;
     private int rating;
     private LocalDate submissionDate;
-}
+
+
+
+
+    }

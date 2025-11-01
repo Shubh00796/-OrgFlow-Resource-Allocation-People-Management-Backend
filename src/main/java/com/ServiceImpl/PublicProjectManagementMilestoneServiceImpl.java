@@ -23,6 +23,12 @@ public class PublicProjectManagementMilestoneServiceImpl implements PublicProjec
     private final PublicProjectManagementMilestoneMapper mapper;
     private final Validator validator;
 
+    public PublicProjectManagementMilestoneServiceImpl(Validator validator) {
+        this.validator = validator;
+        repositoryService = null;
+        mapper = null;
+    }
+
     @Override
     public PublicProjectManagementMilestoneDTO createMilestone(PublicProjectManagementMilestoneDTO milestoneDTO) {
         PublicProjectManagementMilestoneEntity publicProjectManagementMilestoneEntity = mapper.toEntity(milestoneDTO);
